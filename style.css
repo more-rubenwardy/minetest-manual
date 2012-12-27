@@ -4,13 +4,46 @@ html {
 body {
     background: none repeat scroll 0 0 #DDDDDD;
     color: #000000;
-    font-family: Arial,Helvetica,sans-serif;
+    font-family:  Arial,Helvetica,sans-serif;
     margin: 0;
 }
 .constrain {
     margin: auto;
     max-width: 60em;
 }
+
+
+#logo {
+    background-image:url(images/banner.jpg);
+    background-repeat:repeat-x;
+    height: 126px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#logo_left {
+    background-image:url(images/mt_logo.png);
+    background-repeat:none;
+    width: 126px;
+    height: 126px;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+#logo_right {
+    background-image:url(images/bannerR.jpg);
+    background-repeat:none;
+    width: 308px;
+    height: 126px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+     position: absolute;
+}
+
+
 
 
 /*
@@ -42,6 +75,14 @@ body {
 .navlink_special2 {
 }
 
+.navbar {
+    background: none repeat scroll 0 0 #333333;
+    height: 32px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
 
 .navbar ul {
     border: 0 none;
@@ -62,58 +103,6 @@ body {
 #navbar ul li a:hover {
     color: #FFFFFF;
 }
-
-
-.footerbar ul {
-    border: 0 none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.footerbar ul li {
-    display: inline-block;
-    font-size: 18px;
-    padding: 4px 7px 0;
-}
-#footerbar ul li a {
-    color: #CCCCCC;
-    display: block;
-    text-decoration: none;
-}
-#footerbar ul li a:hover {
-    color: #FFFFFF;
-}
-
-
-
-
-
-.footerbar {
-    background: none repeat scroll 0 0 #333333;
-    height: 32px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-}
-.footerbartop {
-    background-color: rgba(0, 0, 0, 0.3);
-    display: block;
-    height: 5px;
-    left: 0;
-    position: fixed;
-    right: 0;
-    bottom: 32px;
-}
-
-.navbar {
-    background: none repeat scroll 0 0 #333333;
-    height: 32px;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-
 
 
 
