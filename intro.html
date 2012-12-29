@@ -1,149 +1,297 @@
 <!DOCTYPE html>
 
+
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="fi">
+
 <head>
+
 	<meta name="keywords" content="minetest,manual,run,walk,through,tutorial" />
+
 	<meta name="description" content="Minetest Manual" />
+
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
 	<link rel="stylesheet" href="style.css" type="text/css" />
+
 	<link rel="shortcut icon" href="/favicon.ico" />
+
 	<link rel="bookmark icon" href="/favicon.ico" />
+
 	<title>Minetest Manual</title>
+
 	
+
 	
+
 	<style>
+
 	#conul {
+
 		border: 0 none;
+
 		list-style-type: none;
+
 		margin: 0;
+
 		padding: 0;
+
 	}
+
 	#conul li {
+
 		display: inline-block;
+
 		font-size: 18px;
+
 		padding: 4px 7px 0;
+
 	}
+
 	</style>
+
+
 
 </head>
 
+
+
 <body>
 
+
+
 <div id="logo">
+
 <div id="logo_right"></div>
+
 <div id="logo_left">
+
 	<a href="http://minetest.net" target="_blank">
+
 		<img width=126 height=126 src="images/mt_logo.png">
+
 	</a>
+
 </div>
+
 </div>
+
+
 
 <div id="navbar" class="navbar">
+
 	<div class="constrain">
+
 		<span class="inbar_left">
+
 			<ul>
+
 				<li class="navlink_special"><a href="index.html">Minetest Manual</a></li>
+
 			</ul>
+
 		</span>
+
 		<span class="inbar_separator">
+
 			|
+
 		</span>
+
 		<span class="inbar_left">
+
 			<ul>
+
                                 <li class="navlink_special"><a href="intro.html">Introduction</a></li>
+
                                 <li class="navlink_special"><a href="game/install.html">Installing</a></li>
+
                                 <li class="navlink_special"><a href="game/index.html">Game Play</a></li>
-				<li class="navlink_special"><a href="game/install.html#mods">Customisation</a></li>
+
+				<li class="navlink_special"><a href="game/custom.html">Customisation</a></li>
+
 			</ul>
+
 		</span>
+
 		<span class="inbar_separator">
+
 			|
+
 		</span>
+
 		<span class="inbar_left">
+
 			<ul>
+
 				<li class="navlink_special"><a href="mod/index.html">Modding</a></li>
+
 				<li class="navlink_special"><a href="dev/index.html">Engine Dev</a></li>
+
 			</ul>
+
 		</span>
+
+
 
 		<span class="inbar_right">
+
 			<ul>
+
 				<li class="navlink_special"><a href="http://github.com/rubenwardy/minetest-manual" target="_blank" title="This manual's git hub page">Git Hub</a></li>
+
 			</ul>
+
 		</span>
+
 	</div>
+
 </div>
 
+
+
 <div id="content">
+
 <div class="constrain">
+
 <div style="clear: both;"></div>
+
 <!-- end of header -->
+
 	<h1>Introduction to Minetest</h1>
+
 	
+
 		<div style="float: right;margin-left:1em;">
+
 			<table>
+
 				<tr><th bgcolor="#BBBBBB" colspan=2>Minetest -C55</th></tr>
+
 				<tr><td bgcolor="#BBBBBB"><b>Project Started:</b></td><td>October 2010</td></tr>
+
 				<tr><td bgcolor="#BBBBBB"><b>Released Date:</b></td><td>September 2011</td></tr>
+
 				<tr><td bgcolor="#BBBBBB"><b>Creator:</b></td><td>Perttu "celeron55" Ahola</td></tr>
+
 				<tr><td bgcolor="#BBBBBB"><b>Engine:</b></td><td>Irrlicht</td></tr>
+
 			</table>
 
+
+
 		</div>
+
 	
+
 		Many features in Minetest are missed or mis-understood by new players. This chapter will go over the basic things you need to know about Minetest.
 
+
+
                 <p>
+
 		Minetest is written in C++, so <b>executes faster</b> than Java code. It is a <b>Free</b> and <b>Open</b> Source Game,
+
 		released under the LGPL license, and is available for Windows and Linux.
+
 		iOS (Mac) and other ports can be compiled from the source.
+
 		</p>
+
+
+
 
 
 	<h2>The aims of Minetest</h2>
 
 
-		
-		<h3>1. Free-ness</h3>
-		
-		<p>
-		Minetest is a <b>Free</b> and <b>Open</b> Source Game, released under the LGPL license.
-		</p>
+
+
 
 		
-		<h3>2. Device Compatibility</h3>
+
+		<h3>1. Free-ness</h3>
+
 		
+
 		<p>
-		Minetest runs on old devices, and works on all devices more natively and efficiently than Java games.
+
+		Minetest is a <b>Free</b> and <b>Open</b> Source Game, released under the LGPL license.
+
 		</p>
+
+
+
+		
+
+		<h3>2. Device Compatibility</h3>
+
+		
+
+		<p>
+
+		Minetest runs on old devices, and works on all devices more natively and efficiently than Java games.
+
+		</p>
+
+
 
                 <div style="float: right;margin-left:1em;margin-bottom:1em;">
+
 			<a href="images/sc_mod.png"><img src="images/sc_mod_tmp.png" width=205></a>
+
                         <br>
+
                         An example of a mod's lua code
+
 		</div>
 
+
+
 		<h3>3. Extendablity</h3>
+
   
+
 		<p>
+
 		All of the content in Minetest is supplied by Lua mods, even the default content in the game is a mod.
+
                 Mods are made with Lua, which makes mod making easy.
+
                 Because of this, you can extend Minetest to your taste, and playing style.
-		</p>
-		
-		<p>
-		There are many mods available, such as:
-                Animals, Farming and Food for you hunger cravings,
-                and
-                <a class="tooltip" title="(redstone)"><u>Mesecons</u></a>, Moreblocks and 3d Furniture for your building needs.
-		</p>
-		
-		<p>
-		To learn more about lua modding, see the <a href="mod/index.html">modding chapter</a> of this manual.
+
 		</p>
 
+		
+
+		<p>
+
+		There are many mods available, such as:
+
+                Animals, Farming and Food for you hunger cravings,
+
+                and
+
+                <a class="tooltip" title="(redstone)">Mesecons</a>, Moreblocks and 3d Furniture for your building needs.
+
+		</p>
+
+		
+
+		<p>
+
+		To learn more about lua modding, see the <a href="mod/index.html">modding chapter</a> of this manual.
+
+		</p>
+
+
+
 </div>
+
 </div>
+
+
 
 </body>
+
 </html>

@@ -1,137 +1,280 @@
 html {
+
     margin: 0;
+
 }
+
 body {
+
     background: none repeat scroll 0 0 #333333;
+
     color: #000000;
+
     font-family:  Arial,Helvetica,sans-serif;
+
     margin: 0;
+
 }
+
 .constrain {
+
     margin: auto;
+
     max-width: 60em;
+
 }
+
+
+
 
 
 #logo {
+
     background-image:url(images/banner.jpg);
+
     background-repeat:repeat-x;
+
     height: 126px;
+
     left: 0;
+
     right: 0;
+
     top: 0;
+
 }
 
+
+
 #logo_left {
+
     width: 126px;
+
     height: 126px;
+
     left: 30px;
+
     top: 0;
+
     bottom: 0;
+
     position: absolute;
+
 }
+
 #logo_right {
+
     background-image:url(images/bannerR.jpg);
+
     background-repeat:none;
+
     width: 308px;
+
     height: 126px;
+
     right: 0;
+
     top: 0;
+
     bottom: 0;
+
      position: absolute;
+
 }
+
+
+
+
+
 
 
 
 
 /*
+
 --
+
 --     NAVIGATION BARS
+
 --
+
 */
 
+
+
 .inbar_left{
+
     float: left;
-}
-.inbar_right {
-    float: right;
-}
-.inbar_separator {
-    color: #666666;
-    display: block;
-    float: left;
-    font-size: 18px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 4px;
-    text-decoration: none;
-}
-.navlink_normal {
-}
-.navlink_special {
-}
-.navlink_special2 {
+
 }
 
-.navbar {
-    background: none repeat scroll 0 0 #333333;
-    height: 32px;
-    left: 0;
-    right: 0;
-    top: 0;
+.inbar_right {
+
+    float: right;
+
 }
+
+.inbar_separator {
+
+    color: #666666;
+
+    display: block;
+
+    float: left;
+
+    font-size: 18px;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+    padding-top: 4px;
+
+    text-decoration: none;
+
+}
+
+.navlink_normal {
+
+}
+
+.navlink_special {
+
+}
+
+.navlink_special2 {
+
+}
+
+
+
+.navbar {
+
+    background: none repeat scroll 0 0 #333333;
+
+    height: 32px;
+
+    left: 0;
+
+    right: 0;
+
+    top: 0;
+
+}
+
+
+
 
 
 .navbar ul {
+
     border: 0 none;
+
     list-style-type: none;
+
     margin: 0;
+
     padding: 0;
+
 }
+
 .navbar ul li {
+
     display: inline-block;
+
     font-size: 18px;
+
     padding: 4px 7px 0;
+
 }
+
 #navbar ul li a {
+
     color: #CCCCCC;
+
     display: block;
+
     text-decoration: none;
+
 }
+
 #navbar ul li a:hover {
+
     color: #FFFFFF;
+
 }
+
+
+
+
+
+
 
 
 
 
 
 #content {
+
     background: none repeat scroll 0 0 #FFFFFF;
+
     font-size: 90%;
+
     margin: 0;
+
     padding: 1em 0 2em;
+
 }
+
 #content img {
+
     margin: 0.5em;
+
 }
+
 #content a img {
+
     border: 1px solid #666666;
+
 }
+
 #content a:hover img {
+
     border: 1px solid #000000;
+
 }
+
 #content a {
+
     text-decoration: none;
+
 }
+
 #content a:visited {
+
 }
+
 #content a:hover {
+
     text-decoration: underline;
+
 }
+
 #content h2 h3 h4 {
+
     color: #222222;
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,60 +285,121 @@ body {
 
 
 #footer {
+
     background: none repeat scroll 0 0 #DDDDDD;
+
     clear: both;
+
     color: #000000;
+
     display: block;
+
     margin-top: 1em;
+
     padding: 0 0.2em 2em;
+
 }
+
 .footerlogo {
+
     margin: auto;
+
     text-align: center;
+
 }
+
 .footerlogo img {
+
     vertical-align: middle;
+
 }
+
 .footerlogo span {
+
     margin: 1em;
+
     vertical-align: middle;
+
 }
+
 .footermainlist {
+
     display: inline-block;
+
     text-align: left;
+
     vertical-align: middle;
+
 }
+
 #footer ul {
+
     list-style: none outside none;
+
     padding: 0 0 0 1.5em;
+
 }
+
 #footer ul .the_li {
+
     font-size: 16px;
+
     font-weight: bold;
+
 }
+
+
+
+
+
 
 
 
 
 .tooltip {
+
     color: #005500;
-    text-decoration: underline;
+
+}
+.tooltip{
+     border-bottom: 2px dotted #005500;
+}
+.tooltip:hover {
+     border-bottom: 2px solid #005500;
 }
 
 .bigbutton {
+
 	width: 210px;
+
 	height: 44px;
+
 	background-image:url(images/big_button.png);
+
         background-repeat:none;
+
         font-size: 20px;
+
         padding: 18px 0 0 20px;
+
         margin-left: 20px;
+        
+        cursor: pointer;
+
 }
 
+
+
 .bigbutton a {
+
     color: #CCCCCC;
+
     text-decoration: none;
+
 }
+
 .bigbutton a:hover {
+
     color: #FFFFFF;
+
 }
