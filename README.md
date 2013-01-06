@@ -15,6 +15,6 @@ The data will bring together many existing sources such as dev.minetest.net and 
 Licensing
 ---------
 
-The Manual is licensed by CC-BY-SA 3.0 to Rubenwardy and other contributors.
+The Manual is licensed by CC-BY-SA 3.0 to Rubenwardy and other [contributors https://github.com/rubenwardy/minetest-manual/graphs/contributors].
 
 http://creativecommons.org/licenses/by-sa/3.0/
