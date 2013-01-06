@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="fi">
+
+<head>
+
+	<meta name="keywords" content="minetest,manual,run,walk,through,tutorial" />
+
+	<meta name="description" content="Minetest Manual" />
+
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<link rel="bookmark icon" href="/favicon.ico" />
+
+	<title>Minetest Manual</title>
+
+	
+
+	
+
+	<style>
+
+	#conul {
+
+		border: 0 none;
+
+		list-style-type: none;
+
+		margin: 0;
+
+		padding: 0;
+
+	}
+
+	#conul li {
+
+		display: inline-block;
+
+		font-size: 18px;
+
+		padding: 4px 7px 0;
+
+	}
+
+	</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="logo">
+
+<div id="logo_right"></div>
+
+<div id="logo_left">
+
+	<a href="http://minetest.net" target="_blank">
+
+		<img width=126 height=126 src="images/mt_logo.png">
+
+	</a>
+
+</div>
+
+</div>
+
+
+
+<div id="navbar" class="navbar">
+
+	<div class="constrain">
+
+		<span class="inbar_left">
+
+			<ul>
+
+				<li class="navlink_special"><a href="index.html">Minetest Manual</a></li>
+
+			</ul>
+
+		</span>
+
+		<span class="inbar_separator">
+
+			|
+
+		</span>
+
+		<span class="inbar_left">
+
+			<ul>
+
+                                <li class="navlink_special"><a href="intro.html">Introduction</a></li>
+
+                                <li class="navlink_special"><a href="game/install.html">Installing</a></li>
+
+                                <li class="navlink_special"><a href="game/index.html">Game Play</a></li>
+
+				<li class="navlink_special"><a href="game/custom.html">Customisation</a></li>
+
+			</ul>
+
+		</span>
+
+		<span class="inbar_separator">
+
+			|
+
+		</span>
+
+		<span class="inbar_left">
+
+			<ul>
+
+				<li class="navlink_special"><a href="mod/index.html">Modding</a></li>
+
+				<li class="navlink_special"><a href="dev/index.html">Engine Dev</a></li>
+
+			</ul>
+
+		</span>
+
+
+
+		<span class="inbar_right">
+
+			<ul>
+
+				<li class="navlink_special"><a href="http://github.com/rubenwardy/minetest-manual" target="_blank" title="This manual's git hub page">Git Hub</a></li>
+
+			</ul>
+
+		</span>
+
+	</div>
+
+</div>
+
+
+
+<div id="content">
+
+<div class="constrain">
+
+<div style="clear: both;"></div>
+
+<!-- end of header -->
+
+	<h1>Minetest Terminology</h1>
+		
+
+	<h2>Minetest and its components</h2>
+
+		
+		<ul>
+			<li><b>Irrlicht</b> is the 3d rendering libary used by the Minetest engine.</li>
+                        <li><b>Minetest Engine</b> - a game engine consisting of a collection of libraries connected by c++ code.</li>
+                        <li><b>Minetest Game</b> - a collection of mods (as below), consisting primarily of the minetest_game repository, which provides the bulk of the game's content.</li>
+                        <li><b>Mods</b> are plugins that use the lua modding API to modify, extend or add features and blocks.</li>
+                        <li><b>Server</b> - the program that manages and distributes mod, texture and sound data to the players. It also does all of the mod initiation.</li>
+                        <li><b>Client</b> - the program that the player uses to connect to singleplayer or multiplayer games. Handles the rendering of the world.</li>
+			<li><b>minetest.conf</b> is a file in the root directory which contains settings for the game.</li>
+                </ul>
+
+
+
+	<h2>In-game Content</h2>
+		<ul>
+			<li>a <b>World</b> is a saved game in Minetest, which folder contains:
+				<ul>
+					<li><b>Map</b> - a SQLite database of the maps content, everything from blocks to chest contents.</li>
+                        		<li>the players passwords, their health, and their inventory.</li>
+                        		<li>and other needed files, such as banlists, seed numbers and protected areas.</li>
+				</ul>
+			</li>
+
+			<li><b>Blocks</b> are 16x16x16 groups of nodes.</li>
+			<li><b>Nodes</b> are 1x1x1 meter individual cubes in the game, and are grouped, generated and loaded by their blocks.</li>
+			<li><b>Object</b> - something in the world that is not attached to any particular node or position, can move and act on its own. Examples include mobs, dropped items, falling sand or gravel, primed TNT. Players are also objects.</li>
+			<li><b>Entity</b> - an object (see above) that is written in Lua.</li>
+
+			<li><b>Items</b>
+                        	<ul>
+					<li><b>Tool item</b> - a type of item that is non-stackable, wears out and improves mining speed or deals more damage. Examples: Pickaxes, axes, shovels, swords.</li>
+					<li><b>Node item</b> - a type of item that can be placed as a node (see above). These include dirt, stone, cobble, etc., but also things like torches and signs..</li>
+					<li><b>Material item</b> - another name for "Node item"</li>
+					<li><b>CraftItems</b> - a type of item that can (depending on the item) be eaten, be used in crafting recipes or cooked in a furnace, be placed as objects or be used on things in the world.</li>
+				</ul>
+                        </li>
+
+
+                        <li><b>Node metadata</b> - extra data that is attached to a node. Chests and furnaces use this to store their inventories, and signs use this to store what is written on them. </li>
+                        <li><b>Environment</b> - A global object that (amongst other things) provides access to all nodes, (active) objects and players.</li>
+			<li><b><a class="tooltip" title="Active Block Modifiers">ABM</a>'s</b> are processes that run on blocks of a certain type, changing them or giving them interactive properties. (ie: Furnaces, Grass growing)</li>
+		</ul>
+		
+	<h2>Lua and Modding related</h2>
+                 <ul>
+                        <li><b>Lua</b> is a simple programming language that is used in mods</li>
+                        <li><b>The Modding api</b> is a selection of functions and values, used by mod files to modify, extend or add features and blocks.</li>
+		</ul>
+		
+		
+		
+      <p>
+      <i>Source: <a href="http://minetest.net/wiki/doku.php?id=code:lua_api#some_quick_terminology">Minetest Dev Wiki</a> and others.</i>
+</div>
+
+</div>
+
+
+
+</body>
+
+</html>
